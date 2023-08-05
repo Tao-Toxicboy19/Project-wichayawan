@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { DataUser } from "../../../App";
 
 type Props = {};
 
 export default function Navber({}: Props) {
+  // const { check } = useContext(DataUser);
   return (
     <div className="bg-gray-100 font-sans w-full m-0">
       <div className="bg-white shadow">
@@ -10,6 +13,7 @@ export default function Navber({}: Props) {
           <div className="flex items-center justify-between py-4">
             <div>
               Logo
+              {/* {check.toString()} */}
             </div>
 
             <div className="hidden sm:flex sm:items-center">

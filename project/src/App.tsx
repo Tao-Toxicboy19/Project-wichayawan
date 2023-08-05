@@ -12,6 +12,7 @@ type Props = {};
 export const DataUser = createContext<any>(null);
 
 export default function App({}: Props) {
+  // const [check, setCheck] = useState(false);
   const [data, setData] = useState<UserData>({
     first_name: "",
     last_name: "",

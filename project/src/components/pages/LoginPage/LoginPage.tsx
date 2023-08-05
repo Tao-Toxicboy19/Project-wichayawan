@@ -1,7 +1,7 @@
 import { useState, ChangeEvent, FormEvent, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { LoginForm } from "../../../types/login.type";
+import { LoginForm } from "../../../types/Login.type";
 import { DataUser } from "../../../App";
 
 export default function LoginPage(): JSX.Element {
