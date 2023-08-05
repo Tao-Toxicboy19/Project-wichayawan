@@ -13,13 +13,13 @@ export const RegisterController = async (req: Request, res: Response) => {
 
         // Validate user input
         if (!(email && password && first_name && last_name)) {
-            res.status(400).send("All input is required")
+            return res.status(400).json({ error: "ต้องป้อนข้อมูลทั้งหมด" });
         }
         // check if user already exist
         // Validate if user exist in our dadtabase
         const oldUser = await User.findOne({ email })
         if (oldUser) {
-            return res.status(409).send("User already exist. Please login")
+            return res.status(400).json({ error: "มีผู้ใช้นี้อยู่แล้ว. กรุณาเข้าสู่ระบบ" });
         }
 
         // Encrypt user password

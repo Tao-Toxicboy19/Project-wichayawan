@@ -13,21 +13,21 @@ export const LoginController = async (req: Request, res: Response) => {
 
         // Validate user input
         if (!(email && password)) {
-            return res.status(404).json({ error: "ต้องป้อนข้อมูลทั้งหมด" });
+            return res.status(400).json("All input is required")
         }
 
         // Validate if user exists in our database
         const user = await User.findOne({ email })
 
         if (!user) {
-            return res.status(404).json({ error: "ไม่พบชื่อผู้ใช้" })
+            return res.status(400).json({message:"ไม่พบชื่อผู้ใช้"})
         }
 
         // Validate password
         const isPasswordValid = await bcrypt.compare(password, user.password)
 
         if (!isPasswordValid) {
-            return res.status(401).json({ error: "รหัสผ่านไม่ถูกต้อง" })
+            return res.status(400).json({message:"รหัสผ่านไม่ถูกต้อง"})
         }
 
         // Create token
@@ -43,10 +43,10 @@ export const LoginController = async (req: Request, res: Response) => {
         user.token = token
 
         // send back the user object with token (optional)
-        return res.status(200).json({ message: "Login successful", user });
+        return res.status(200).json(user)
 
     } catch (error: unknown) {
-        console.error("Error logging in:", error);
-        return res.status(500).json({ error: "Internal server error" });
+        console.log(error)
+        return res.status(500).json("Server error")
     }
 }
