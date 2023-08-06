@@ -1,49 +1,61 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { DataUser } from "../../../App";
 
 type Props = {};
 
 export default function Navber({}: Props) {
-  // const { check } = useContext(DataUser);
+  const { check, setCheck } = useContext(DataUser);
+  const navigate = useNavigate();
+
   return (
     <div className="bg-gray-100 font-sans w-full m-0">
       <div className="bg-white shadow">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
-            <div>
-              Logo
-              {/* {check.toString()} */}
-            </div>
-
+            <div>Logo</div>
             <div className="hidden sm:flex sm:items-center">
-              <Link
-                to={"/product"}
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
-              >
-                Products
-              </Link>
-              <Link
-                to={"profile"}
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
-              >
-                Profile
-              </Link>
-            </div>
-
-            <div className="hidden sm:flex sm:items-center">
-              <Link
-                to={"login"}
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
-              >
-                Sign in
-              </Link>
-              <Link
-                to={"/signup"}
-                className="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg hover:text-purple-600 hover:border-purple-600"
-              >
-                Sign up
-              </Link>
+              <div className="hidden sm:flex sm:items-center px-10">
+                <Link
+                  to={"/product"}
+                  className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
+                >
+                  Products
+                </Link>
+                <Link
+                  to={"/profile"}
+                  className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
+                >
+                  Profile
+                </Link>
+              </div>
+              {!check ? (
+                <>
+                  <Link
+                    to={"login"}
+                    className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
+                  >
+                    Sign in
+                  </Link>
+                  <Link
+                    to={"/signup"}
+                    className="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg hover:text-purple-600 hover:border-purple-600"
+                  >
+                    Sign up
+                  </Link>
+                </>
+              ) : (
+                <button
+                  type="button"
+                  className="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg hover:text-purple-600 hover:border-purple-600"
+                  onClick={() => {
+                    setCheck(false);
+                    navigate("/login");
+                  }}
+                >
+                  Logout
+                </button>
+              )}
             </div>
 
             <div className="sm:hidden cursor-pointer">
