@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { DataUser } from "../../../App";
-import { Avatar, Button } from "@material-tailwind/react";
+import { Avatar } from "@material-tailwind/react";
 
 type Props = {};
 

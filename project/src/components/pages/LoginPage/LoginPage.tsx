@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { DataUser } from "../../../App";
 import { LoginForm } from "../../../types/Login.type";
 import { Alert, Button, Input } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
 
 export default function LoginPage() {
   const navigate = useNavigate();
