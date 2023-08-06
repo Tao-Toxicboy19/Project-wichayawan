@@ -3,6 +3,15 @@
 # backend
 cd backend
 npm install or yarn 
+create file .env
+
+.env file
+MONGO_USERNAME="Username"
+MONGO_PASSWORD="Password"
+SERVER_PORT=5050
+
+TOKEN_KEY=prayut
+
 ## sunserver 
 npm start or yarn start
 
