@@ -23,7 +23,7 @@ export default function RegisterPage(): JSX.Element {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3003/api/register",
+        "https://nodejs-api-k58l.onrender.com/api/register",
         formData
       );
       navigate("/login");

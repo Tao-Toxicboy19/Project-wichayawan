@@ -22,7 +22,7 @@ export default function LoginPage() {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3003/api/login",
+        "https://nodejs-api-k58l.onrender.com/api/login",
         loginForm
       );
 
