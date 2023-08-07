@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "install-deps": "yarn install",
-    "run-migrations": "node run-migrations-script.js",
+    "dev": "vite",
     "build": "tsc && vite build",
-    "deploy": "bash deploy-script.sh"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "engines": {
     "node": "18.16.1"
