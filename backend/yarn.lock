@@ -305,10 +305,10 @@ bson@^1.1.4:
   resolved "https://registry.yarnpkg.com/bson/-/bson-1.1.6.tgz#fb819be9a60cd677e0853aee4ca712a785d6618a"
   integrity sha512-EvVNVeGo4tHxwi8L6bPj3y3itEvStdwvvlojVxxbyYfoaxJ6keLgrTuKdyfEAszFK+H3olzBuafE0yoh0D1gdg==
 
-bson@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/bson/-/bson-5.0.0.tgz#32b3d10b55be5c7d698cf311b7232a88498efb7d"
-  integrity sha512-EL2KpZdyhshyyptj6pnQfnFKPoncD9KwZYvgmj/FXQiOUU1HWTHWmBOP4TZXU3YzStcI5qgpIl68YnMo16s26A==
+bson@^5.0.0-alpha.2:
+  version "5.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/bson/-/bson-5.0.0-alpha.2.tgz#987052a0cf9e21b2a616ecbf8468b23e6df47aac"
+  integrity sha512-dC1/0ch/vSx2RtKMLvPXo3uBLl3xzp72r7qjxZtHB01HW6r3JJo//BL5e1OwQFeDH79lUV00PAJz5SoKqqQpeA==
 
 buffer-equal-constant-time@1.0.1:
   version "1.0.1"
