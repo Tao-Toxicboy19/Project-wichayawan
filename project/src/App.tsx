@@ -6,6 +6,7 @@ import RegisterPage from "./components/pages/RegisterPage/RegisterPage";
 import ProfilePage from "./components/pages/ProfilePage/ProfilePage";
 import { createContext, useState } from "react";
 import { UserData } from "./types/UserData.type";
+import Page from "./components/pages/HomePage/Page";
 
 export const DataUser = createContext<any>(null);
 
@@ -35,6 +36,7 @@ export default function App() {
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<RegisterPage />} />
+            <Route path="/home" element={<Page />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/product" element={<ProductsPage />} />
             <Route

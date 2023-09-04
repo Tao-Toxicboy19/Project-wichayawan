@@ -4,7 +4,7 @@ import { DataUser } from "../../../App";
 
 type Props = {};
 
-export default function Navber({}: Props) {
+export default function Navber({ }: Props) {
   const { check, setCheck } = useContext(DataUser);
   const navigate = useNavigate();
 
@@ -16,6 +16,10 @@ export default function Navber({}: Props) {
             <div>Logo</div>
             <div className="hidden sm:flex sm:items-center">
               <div className="hidden sm:flex sm:items-center px-10">
+                <Link to={"/home"}
+                  className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">
+                  Home
+                </Link>
                 <Link
                   to={"/product"}
                   className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
@@ -28,6 +32,7 @@ export default function Navber({}: Props) {
                 >
                   Profile
                 </Link>
+
               </div>
               {!check ? (
                 <>

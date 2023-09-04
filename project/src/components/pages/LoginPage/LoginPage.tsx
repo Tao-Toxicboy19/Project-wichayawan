@@ -21,8 +21,7 @@ export default function LoginPage() {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     try {
-      const response = await axios.post(
-        "https://nodejs-api-k58l.onrender.com/api/login",
+      const response = await axios.post(`${import.meta.env.VITE_REACT_APP_URL}/api/login`,
         loginForm
       );
 
